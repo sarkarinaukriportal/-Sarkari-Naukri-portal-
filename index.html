@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇮🇳सरकारी नौकरी पोर्टल🇮🇳 - Sarkari Naukri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #2563eb;
+            --accent: #3b82f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+        }
+        .job-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-left-color: var(--secondary);
+        }
+        .notification-dot {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 12px;
+            height: 12px;
+            background-color: #ef4444;
+            border-radius: 50%;
+        }
+        .active-tab {
+            border-bottom: 3px solid var(--secondary);
+            font-weight: 600;
+        }
+        .selection-pill {
+            transition: all 0.2s ease;
+        }
+        .selection-pill:hover {
+            background-color: #e0f2fe;
+            color: var(--secondary);
+        }
+        .selection-pill.selected {
+            background-color: var(--secondary);
+            color: white;
+        }
+        .devanagari {
+            font-family: 'Nirmala UI', 'Mangal', sans-serif;
+        }
+        @media (max-width: 640px) {
+            .mobile-flex-col {
+                flex-direction: column;
+            }
+            .mobile-mt-4 {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Your HTML content continues here -->
+    <h1 class="text-center text-3xl font-bold mt-10 devanagari">सरकारी नौकरी पोर्टल</h1>
+    <p class="text-center mt-2 devanagari">यह एक डेमो HTML पेज है</p>
+</body>
+</html>
