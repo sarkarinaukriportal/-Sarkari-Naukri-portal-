@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🇮🇳सरकारी नौकरी पोर्टल🇮🇳 - Sarkari Naukri</title>
+    <title>सरकारी नौकरी पोर्टल - Sarkari Naukri</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -12,21 +12,26 @@
             --secondary: #2563eb;
             --accent: #3b82f6;
         }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        
         .gradient-bg {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
         }
+        
         .job-card {
             transition: all 0.3s ease;
             border-left: 4px solid transparent;
         }
+        
         .job-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             border-left-color: var(--secondary);
         }
+        
         .notification-dot {
             position: absolute;
             top: -5px;
@@ -36,24 +41,32 @@
             background-color: #ef4444;
             border-radius: 50%;
         }
+        
         .active-tab {
             border-bottom: 3px solid var(--secondary);
             font-weight: 600;
         }
+        
         .selection-pill {
             transition: all 0.2s ease;
         }
+        
         .selection-pill:hover {
             background-color: #e0f2fe;
             color: var(--secondary);
         }
+        
         .selection-pill.selected {
             background-color: var(--secondary);
             color: white;
         }
+        
+        /* Hindi font support */
         .devanagari {
             font-family: 'Nirmala UI', 'Mangal', sans-serif;
         }
+        
+        /* Responsive adjustments */
         @media (max-width: 640px) {
             .mobile-flex-col {
                 flex-direction: column;
@@ -65,8 +78,266 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Your HTML content continues here -->
-    <h1 class="text-center text-3xl font-bold mt-10 devanagari">सरकारी नौकरी पोर्टल</h1>
-    <p class="text-center mt-2 devanagari">यह एक डेमो HTML पेज है</p>
-</body>
-</html>
+    <!-- Header Section -->
+    <header class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col py-3">
+                <!-- Top Header -->
+                <div class="flex justify-between items-center pb-2 border-b border-blue-200">
+                    <div class="flex items-center">
+                        <img src="C:\Users\india\Desktop\Sarkarinaukriportal\Logo.png" alt="भारत सरकार का चिन्ह" class="h-10 w-10 mr-2">
+                        <div>
+                            <h1 class="text-xl font-bold devanagari">सरकारी भर्ती पोर्टल</h1>
+                            <p class="text-xs opacity-80">सरकारी नौकरी ढूंढने यहां आए </p>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-4">
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 hover:text-blue-200">
+                                <span class="devanagari">भाषा</span>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                            <div class="absolute hidden group-hover:block bg-white text-gray-800 rounded shadow-lg mt-1 py-1 w-40 right-0">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 devanagari">हिंदी</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">English</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 devanagari">বাংলা</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 devanagari">मराठी</a>
+                            </div>
+                        </div>
+                        <div class="h-5 w-px bg-blue-300"></div>
+                        <a href="#" class="hover:text-blue-200">
+                            <span class="devanagari">सहायता</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Main Navigation -->
+                <nav class="flex items-center justify-between pt-3">
+                    <div class="flex space-x-1 md:space-x-4">
+                        <a href="#" class="px-2 py-1 text-sm md:text-base md:px-4 md:py-2 rounded active-tab">
+                            <i class="fas fa-home mr-1"></i>
+                            <span class="devanagari">होम</span>
+                        </a>
+                        <a href="#" class="px-2 py-1 text-sm md:text-base md:px-4 md:py-2 rounded hover:bg-blue-700/30 devanagari">
+                            <span>नवीनतम नौकरियां</span>
+                        </a>
+                        <a href="#" class="px-2 py-1 text-sm md:text-base md:px-4 md:py-2 rounded hover:bg-blue-700/30 devanagari">
+                            <span>परीक्षा कैलेंडर</span>
+                        </a>
+                        <a href="#" class="px-2 py-1 text-sm md:text-base md:px-4 md:py-2 rounded hover:bg-blue-700/30 devanagari">
+                            <span>परिणाम</span>
+                        </a>
+                        <a href="#" class="px-2 py-1 text-sm md:text-base md:px-4 md:py-2 rounded hover:bg-blue-700/30 devanagari">
+                            <span>सिलेबस</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-2">
+                        <button class="relative p-2 text-white hover:bg-blue-700/30 rounded-full">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-dot"></span>
+                        </button>
+                        <button class="md:hidden p-2 text-white hover:bg-blue-700/30 rounded-full">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a href="#" class="hidden md:block bg-white text-blue-700 px-4 py-2 rounded-full font-medium hover:bg-blue-50 transition devanagari">
+                            <i class="fas fa-user-circle mr-1"></i>
+                            <span>लॉग इन</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://placehold.co/1920x600" alt="समूह में विविध भारतीय छात्र कंप्यूटर पर सरकारी नौकरी के फॉर्म भरते हुए" class="w-full h-full object-cover opacity-20">
+        </div>
+        
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4 devanagari">भारत सरकार की सभी नौकरियां एक ही स्थान पर</h1>
+                <p class="text-xl mb-8 opacity-90 devanagari">केंद्र सरकार, राज्य सरकार, एमपीएससी, यूपीएससी, एसएससी, बैंकिंग, रेलवे और सभी सरकारी विभागों की नवीनतम भर्तियां</p>
+                
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                        <div class="flex-grow relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                            <input type="text" class="pl-10 pr-4 py-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none devanagari" placeholder="नौकरी खोजें (पद, विभाग, कीवर्ड)">
+                        </div>
+                        
+                        <div class="flex-grow relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-map-marker-alt text-gray-400"></i>
+                            </div>
+                            <select class="pl-10 pr-4 py-3 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none appearance-none bg-white devanagari">
+                                <option value="">सभी राज्य</option>
+                                <option value="delhi">दिल्ली</option>
+                                <option value="maharashtra">महाराष्ट्र</option>
+                                <option value="up">उत्तर प्रदेश</option>
+                                <option value="bihar">बिहार</option>
+                                <option value="wb">पश्चिम बंगाल</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <i class="fas fa-chevron-down text-gray-400"></i>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center justify-center transition">
+                            <span class="devanagari">खोजें</span>
+                            <i class="fas fa-search ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-6 flex flex-wrap justify-center gap-2">
+                    <span class="text-sm font-medium devanagari">लोकप्रिय खोज:</span>
+                    <a href="#" class="text-sm px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full transition devanagari">SSC</a>
+                    <a href="#" class="text-sm px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full transition devanagari">UPSC</a>
+                    <a href="#" class="text-sm px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full transition devanagari">IBPS</a>
+                    <a href="#" class="text-sm px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full transition devanagari">रेलवे</a>
+                    <a href="#" class="text-sm px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full transition devanagari">शिक्षक</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <!-- Features Section -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 devanagari">क्यों चुनें हमारा पोर्टल?</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto devanagari">भारत सरकार के सहयोग से विकसित, सबसे विश्वसनीय और संपूर्ण सरकारी नौकरी सूचना पोर्टल</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-certificate text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 devanagari">प्रामाणिक जानकारी</h3>
+                    <p class="text-gray-600 devanagari">सीधे सरकारी विभागों से प्राप्त नवीनतम और प्रामाणिक नौकरी सूचनाएं</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-bell text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 devanagari">तत्काल सूचनाएं</h3>
+                    <p class="text-gray-600 devanagari">नई नौकरियां और अपडेट के लिए मोबाइल नोटिफिकेशन और ईमेल अलर्ट</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-file-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 devanagari">एक-क्लिक आवेदन</h3>
+                    <p class="text-gray-600 devanagari">आवेदन पत्र भरने से लेकर भुगतान तक की सुविधा एक ही पोर्टल पर</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section class="mb-16">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0 devanagari">श्रेणियाँ</h2>
+                
+                <div class="flex space-x-1 md:space-x-3 bg-gray-100 p-1 rounded-full">
+                    <button class="px-3 py-1 rounded-full text-sm selection-pill selected devanagari">सभी</button>
+                    <button class="px-3 py-1 rounded-full text-sm selection-pill hover:bg-gray-200 devanagari">केंद्र सरकार</button>
+                    <button class="px-3 py-1 rounded-full text-sm selection-pill hover:bg-gray-200 devanagari">राज्य सरकार</button>
+                    <button class="px-3 py-1 rounded-full text-sm selection-pill hover:bg-gray-200 devanagari">बैंकिंग</button>
+                    <button class="px-3 py-1 rounded-full text-sm selection-pill hover:bg-gray-200 devanagari">रेलवे</button>
+                    <button class="px-3 py-1 rounded-full text-sm selection-pill hover:bg-gray-200 devanagari">शिक्षा</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">UPSC</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">SSC</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-university text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">बैंकिंग</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-train text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">रेलवे</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-school text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">शिक्षा</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-balance-scale text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">न्यायिक</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-flask text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">विज्ञान</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-user-md text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">चिकित्सा</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-bolt text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">इंजीनियरिंग</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-leaf text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">कृषि</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700 text-sm devanagari">रक्षा</span>
+                </a>
+                
+                <a href="#" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-ellipsis-h text-xl"></i>
+                    </div>
+       
